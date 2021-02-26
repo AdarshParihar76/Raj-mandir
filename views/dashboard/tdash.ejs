@@ -1,0 +1,22 @@
+<%- include ("../partials/header") %>
+
+<div class="mid mt-4">
+	<h2 id="head">
+		Teacher's Section
+	</h2>
+</div>
+
+<div class="mid mt-3">
+	<a class="btn btn-primary mt-3" href="/teachers/testq"> Post test </a> </br>
+	<a class="btn btn-outline-secondary mt-3" href="/teachers/schedule"> Post schedules </a> </br>
+	<a class="btn btn-outline-secondary mt-3" href="/teachers/addTeacher">Add Teacher </a> </br>	
+	<a class="btn btn-info mt-3" href="/teachers/seeTest">See Test </a> </br>	
+	<a class="btn btn-danger mt-3" href="/teachers/deleteTest/<%= currentUser.username %>">Delete all the Tests and answers </a> </br>		
+
+</div>
+
+<div class="logo mid">
+	
+</div>
+
+<%- include("../partials/footer") %>

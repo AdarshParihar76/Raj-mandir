@@ -1,0 +1,36 @@
+<%- include ("../partials/header") %>
+
+<div class="mid">
+	<h2>
+		Admin Section
+	</h2>
+</div>
+
+<div class="mid mb-3 mt-3">
+	<% if(adm.length>0){ %>
+		<div class="mid mb-4" id="head">
+			<h2>
+				All Admissions
+			</h2>
+		</div>
+		<% adm.forEach(function(s){ %>
+			<div id="head">
+				<strong>
+					<%= s.name %>&nbsp; - <%= s.class %> </br>
+					Contact no.- &nbsp <%= s.Mobno %></br>
+					WhatsApp no.- &nbsp <%= s.wn %> </br>
+				</strong>
+					<a class="btn btn-danger" href="/admin/removeAdm/<%= s.id %>"> Remove </a>
+			</div>
+		<% }); %>
+	<% }else{ %>
+		<div class="mid mb-4" id="head">
+			<h2>
+				No new Admissions
+			</h2>
+		</div>	
+	<% } %>
+</div>
+
+
+<%- include("../partials/footer") %>

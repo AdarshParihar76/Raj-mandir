@@ -1,0 +1,34 @@
+<%- include ("../partials/header") %>
+
+<div class="mid mt-4">
+	<h1 id="head"> Here is your test </h1>
+	<p> 
+		Class : <%= test[0].class %> </br>
+		No. of q. : <%= test[0].noq %> </br>
+	</p>
+</div>
+
+<% for(var i = 0; i<boxes.length; i++){ %>
+	<div class="testq" class="mid">
+		Q.<%= i+1 %> &nbsp;
+		<%= boxes[i].q %> ? </br>
+	</div>
+<% } %>
+
+<div class="mid mt-5">
+	<h3>
+		Fill the Answers
+	</h3>
+	<form class="form-group" action="/students/postAnswers/<%= test[0]._id %>" method="post">
+		<% for(var i = 0; i<boxes.length; i++){ %>
+			Ans.<%= i+1 %> &nbsp;
+			<input class="form-control mb-3" type="text" placeholder="Enter Answer <%= i+1 %>" name="Ans[<%= i %>]" required="">
+		<% } %>
+
+		<div class="mid" style="padding: 4px">
+			<button class="btn btn-success" type="submit"> Post </button>
+		</div>
+	</form>
+</div>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,56 @@
+<%- include ("../partials/header") %>
+
+<div class="mid">
+	<h2>
+		Admin Section
+	</h2>
+</div>
+
+<div class="mid mb-4" id="head">
+	<h2>
+		All users
+	</h2></br>
+	<% if(users.length>0){ %>
+		<% users.forEach(function(u){ %>
+			<div id="head">
+				<%= u.username %>&nbsp; -
+				<a class="btn btn-danger" href="/admin/removeUser/<%= u.id %>"> Remove </a> </br>
+			</div>
+		<% }); %>
+	<% } %>
+</div>
+
+<div class="mid mb-3 mt-3">
+	<% if(student.length>0){ %>
+		<h2 id="head">
+			Students
+		</h2>
+		<% student.forEach(function(s){ %>
+			<div id="head">
+				<strong>
+					<%= s.username %>&nbsp; - <%= s.class %> </br>
+				</strong>
+					<a class="btn btn-danger" href="/admin/remove/<%= s.id %>"> Remove </a>
+			</div>
+		<% }); %>
+	<% } %>
+</div>
+
+<div class="mid">
+	<% if(teacher.length>0){ %>
+		<h2 id="head">
+			Teachers
+		</h2>
+		<% teacher.forEach(function(s){ %>
+			<div id="head">
+				<strong>
+					<%= s.username %>&nbsp; - <%= s.sub %> </br>
+				</strong>
+					<a class="btn btn-danger" href="/admin/remove/<%= s.id %>"> Remove </a>
+			</div>
+		<% }); %>
+	<% } %>
+</div>
+
+
+<%- include("../partials/footer") %>

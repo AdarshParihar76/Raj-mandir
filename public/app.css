@@ -1,0 +1,79 @@
+.logo {
+	background-image: url(Images/School.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 5px;
+	box-shadow: 2px 3px 5px 2px rgba(213,214,215,.8);
+	height: 470px;
+	width: 100%;
+}
+
+.mid {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 5%;
+}
+
+#vid {
+	margin-top: 10%;
+	width: 96%;
+	height: 28%;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 5%;
+}
+
+#head {
+	border-radius: 5px;
+	padding: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgba(150,150,150,.5);
+	box-shadow: 2px 2px 5px rgba(13,14,15,.8);
+}
+
+#logo {
+	width: 50px;
+}
+
+#gallery {
+	height: 7.5%;
+	width: 30%;
+	float: left;
+	margin: 1.6%;
+}
+
+#photoGallery {
+	height: 1630px;
+	width: 100%;
+	border: 2px solid #ddd;
+}
+
+.testq	{
+	border-radius: 5px;
+	box-shadow: 2px 3px 5px 2px rgba(13,14,15,.8); 
+	width: 80%;
+	margin: 20px auto;
+	height: 300px;
+	background-color: rgba(100,130,120,.3);
+	padding: 40px;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 10% auto;
+}
+
+h1:hover {
+	color: rgba(10,10,10,.7);
+}
+
+.hawa {
+	margin-bottom: 30px;
+}
+
+input:hover {
+	border-radius: 10px;
+	border-color: rgba(10,150,20,.5);
+}

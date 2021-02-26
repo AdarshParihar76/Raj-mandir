@@ -1,0 +1,14 @@
+<%- include("../partials/header") %>
+
+<div class="mid mt-4">
+	<h1 id="head"> Add Teacher </h1>
+
+	<form class="form-group mt-4" action="/teachers/addTeacher" method="post">
+		<input class="form-control mt-2" type="text" placeholder="Subject" name="sub" required="">
+		<input class="form-control mt-2" type="text" placeholder="Username" name="username" required="">
+		<input class="form-control mt-2" type="password" placeholder="Password" name="password" required="">
+		<button class="btn btn-warning mt-2"> Add </button>
+	</form>
+</div>
+
+<%- include("../partials/footer") %>

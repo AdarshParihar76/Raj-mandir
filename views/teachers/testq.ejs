@@ -1,0 +1,60 @@
+<%- include ("../partials/header") %>
+
+<div class="mid mt-4">
+	<h2 id="head">
+		Post test
+	</h2>
+</div>
+
+<% if(test=="null"){ %>
+	<div class="mid mt-3">
+		<form class="form-group" action="testq" method="post">
+			<input class="form-control" type="number" placeholder="Class" name="class" required=""> </br>
+			<input class="form-control" type="number" placeholder="No. of questions" name="noq" required=""> </br>
+			<input class="form-control" type="text" placeholder="Username of Teacher" name="Tname" value="<%= Tname %>" required=""> </br>
+
+				<div class="testq mb-2">
+					Q.1 &nbsp; <input class="form-control" type="text" name="q" placeholder="Enter Question"> </br>
+				</div>
+
+			<button class="btn btn-success"> Next </button>	
+		</form>
+	</div>
+<% } %>
+
+<div class="mid alert alert-danger">
+	<% if(test!=="null"){ %>
+		Class : <%= test.class %> </br>
+		No. of Questions: <%= noq %> </br> 
+	<% } %>
+	<% if(noq>temp){ %>
+		<form class="form-group" action="/teachers/postTest/<%= test.id %>" method="post">
+			<div class="testq">
+				Q.<%= temp+1 %> &nbsp;
+				<input class="form-control" type="text" name="q" placeholder="Enter Question"> </br>
+
+				<div class="mid" style="padding: 4px">
+					<button class="btn btn-info" type="submit"> Post </button>
+				</div>
+			</div>
+		</form>
+
+	<% }else if(temp==noq) { %>
+		<div class="mid" style="padding: 4px">
+			<a  class="btn btn-success" href="/teachers/test/done"> Done </a>
+		</div>
+
+	<% }else{ %>
+
+		<p>
+			Select Class and no. of questions
+		</p>
+	<% } %>
+</div>
+
+<div class="logo">
+	
+</div>
+
+
+<%- include("../partials/footer") %>
